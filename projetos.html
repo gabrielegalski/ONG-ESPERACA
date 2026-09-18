@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos Sociais</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- O Teto (Cabeçalho e Menu) -->
+    <header class="cabecalho-principal">
+      <h1 class="logo">ONG Esperança</h1>
+
+      <!-- 1. O truque do Checkbox invisível -->
+      <input type="checkbox" id="menu-toggle" class="menu-invisivel" />
+
+      <!-- 2. O ícone do Hambúrguer -->
+      <label for="menu-toggle" class="icone-hamburguer"> ☰ </label>
+
+      <!-- 3. A Navegação com o link de Cadastro incluído -->
+      <nav class="menu-navegacao">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+
+          <!-- Item com Submenu (Dropdown) de Doações -->
+          <li class="item-dropdown">
+            <a href="#">Doações ▾</a>
+            <ul class="submenu">
+              <li><a href="#">Dinheiro</a></li>
+              <li><a href="#">Roupas</a></li>
+            </ul>
+          </li>
+
+          <!-- Link direto para a página de Cadastro de Voluntários -->
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- O Miolo (Conteúdo Principal) -->
+    <main>
+      <h1>Nossos Projetos Sociais</h1>
+      <p>
+        Conheça as nossas iniciativas comunitárias e saiba como o seu apoio faz
+        a diferença.
+      </p>
+    </main>
+
+    <!-- O Chão (Rodapé) -->
+    <footer>
+      <p>&copy; 2026 ONG Esperança - Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
