@@ -1,0 +1,15 @@
+# 💚 ONG Esperança - Projeto Prático Front-end
+
+Este repositório armazena o projeto prático da minha faculdade a **ONG Esperança**, focado em estruturação semântica, acessibilidade e design responsivo para o terceiro setor.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5** (Semântica estrutural, formulários com validação nativa e atributos ARIA/acessibilidade).
+- **CSS3** (Variáveis CSS, paleta pastel acolhedora, Grid Layout de 12 colunas e design responsivo com menu hambúrguer).
+
+## 📱 Funcionalidades
+
+- Navegação global fluida entre as páginas Início, Projetos, Doações e Cadastro.
+- Menu responsivo adaptado para dispositivos móveis com suporte a checkbox toggle.
+- Formulário de cadastro de voluntários validado nativamente (CPF, E-mail, Telefone e CEP).
+- Estados interativos refinados com transições suaves e pseudoclasses (`hover`, `focus`).
