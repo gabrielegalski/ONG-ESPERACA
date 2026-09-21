@@ -1,13 +1,13 @@
 :root {
   /* 🎨 Paleta Pastel e Acolhedora da ONG */
-  --cor-primaria-escura: #52796f;
+  --cor-primaria-escura: #24794f;
   --cor-primaria-clara: #84a98c;
   --cor-secundaria: #f2cc8f;
-  --cor-secundaria-clara: #e0e1dd;
+  --cor-secundaria-clara: #e5ebd4;
 
   /* Fundos e Textos */
-  --cor-fundo-site: #eeb94e;
-  --cor-fundo-cartao: #f0e6af;
+  --cor-fundo-site: #539174;
+  --cor-fundo-cartao: #b3d8a9;
   --cor-texto-principal: #353535;
   --cor-texto-secundario: #7d7d7d;
   --cor-texto-claro: #ffffff;
