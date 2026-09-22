@@ -1,23 +1,21 @@
 :root {
-  /* 🎨 Paleta Pastel e Acolhedora da ONG */
-  --cor-primaria-escura: #24794f;
-  --cor-primaria-clara: #84a98c;
-  --cor-secundaria: #f2cc8f;
-  --cor-secundaria-clara: #e5ebd4;
+  /* 🎨 Nova Paleta Orgânica e Acolhedora */
+  --cor-primaria-escura: #56cd6e; /* Verde sálvia suave (Cabeçalho e botões) */
+  --cor-primaria-clara: #a9d8b5; /* Verde sálvia muito suave (Efeito hover) */
+  --cor-secundaria: #e3d2b1; /* Areia terroso (Destaques) */
+  --cor-secundaria-clara: #b99355; /* Cinza quente (Detalhes e bordas) */
 
   /* Fundos e Textos */
-  --cor-fundo-site: #539174;
-  --cor-fundo-cartao: #b3d8a9;
-  --cor-texto-principal: #353535;
+  --cor-fundo-site: #80d6a5; /* Bege creme (Fundo principal do site) */
+  --cor-fundo-cartao: #c5c1b1; /* Bege claro (Fundo dos cartões e formulário) */
+  --cor-texto-principal: #353535; /* Cinza escuro para garantir leitura fácil */
   --cor-texto-secundario: #7d7d7d;
-  --cor-texto-claro: #ffffff;
+  --cor-texto-claro: #353535; /* Ajustado para escuro, pois a paleta nova é muito clara */
 
-  /* 📏 Variáveis de Espaçamento (Essenciais para o Grid e Menu) */
+  /* Variáveis de Espaçamento e Tipografia (Não mexer) */
   --espaco-pequeno: 8px;
   --espaco-medio: 16px;
   --espaco-grande: 24px;
-
-  /* 🔤 Escala Tipográfica */
   --fonte-principal: "Arial", sans-serif;
   --tamanho-texto-normal: 1rem;
 }
@@ -158,12 +156,12 @@ main > * {
   justify-content: space-between;
   align-items: center;
   padding: var(--espaco-medio);
-  background-color: var(--cor-primaria-escura);
-  color: var(--cor-fundo-cartao);
+  background-color: var(--cor-primaria-escura) !important;
+  color: var(--cor-texto-claro);
 }
 
 .cabecalho-principal a {
-  color: var(--cor-fundo-cartao);
+  color: var(--cor-texto-claro);
   text-decoration: none;
   font-weight: bold;
 }
@@ -204,44 +202,33 @@ main > * {
 /* =========================================
    PONTO DE QUEBRA MOBILE (Até 768px)
    ========================================= */
-@media (max-width: 768px) {
-  /* Mostra o ícone de hambúrguer */
-  .icone-hamburguer {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--cor-texto-claro); /* <-- ADICIONE ESTA LINHA */
-  }
-  /* ... resto do código continua igual ... */
+/* Tira o menu da tela (joga para a esquerda) e prepara para deslizar */
+.menu-navegacao {
+  position: absolute;
+  top: 70px;
+  left: -100%;
+  width: 100%;
+  background-color: var(--cor-primaria-escura) !important;
+  transition: all 0.3s ease-in-out;
+}
 
-  /* Tira o menu da tela (joga para a esquerda) e prepara para deslizar */
-  .menu-navegacao {
-    position: absolute;
-    top: 70px; /* Fica logo abaixo do cabeçalho */
-    left: -100%; /* Fora da tela */
-    width: 100%;
-    background-color: var(--cor-primaria-escura);
-    transition: all 0.3s ease-in-out;
-  }
+/* Empilha os links no celular */
+.menu-navegacao ul {
+  flex-direction: column;
+  align-items: center;
+  padding: var(--espaco-medio) 0;
+}
 
-  /* Empilha os links no celular */
-  .menu-navegacao ul {
-    flex-direction: column;
-    align-items: center;
-    padding: var(--espaco-medio) 0;
-  }
+/* A MÁGICA: Quando o checkbox invisível for marcado, puxa o menu para a tela (left: 0) */
+.menu-invisivel:checked ~ .menu-navegacao {
+  left: 0;
+}
 
-  /* A MÁGICA: Quando o checkbox invisível for marcado, puxa o menu para a tela (left: 0) */
-  .menu-invisivel:checked ~ .menu-navegacao {
-    left: 0;
-  }
-
-  /* Ajuste para o submenu não flutuar solto no mobile */
-  .submenu {
-    position: static;
-    display: none;
-  }
-  .item-dropdown:hover .submenu {
-    display: flex;
-  }
+/* Ajuste para o submenu não flutuar solto no mobile */
+.submenu {
+  position: static;
+  display: none;
+}
+.item-dropdown:hover .submenu {
+  display: flex;
 }
