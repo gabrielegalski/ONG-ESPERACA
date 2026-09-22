@@ -245,3 +245,28 @@ main > * {
     display: flex;
   }
 }
+/* css/style.css */
+
+/* 1. Traz de volta o fundo acolhedor da ONG */
+body {
+  background-color: var(--cor-fundo-site) !important;
+  color: var(--cor-texto-principal);
+}
+
+/* 2. Substitui o verde padrão do Bootstrap pelo verde musgo suave da ONG */
+.bg-success,
+header nav.bg-success {
+  background-color: var(--cor-primaria-escura) !important;
+}
+
+/* 3. Ajusta os botões para usarem o verde claro com transição */
+.btn-success {
+  background-color: var(--cor-primaria-clara) !important;
+  border-color: var(--cor-primaria-clara) !important;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: var(--cor-primaria-escura) !important;
+  border-color: var(--cor-primaria-escura) !important;
+}
